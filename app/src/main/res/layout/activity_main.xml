@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Calculator"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="14pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/green"
+            android:textSize="15pt" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/green"
+            android:textSize="15pt" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="plus"
+                android:text="Plus"
+                android:textColor="@color/green"
+                android:textSize="8pt" />
+
+            <RadioButton
+                android:id="@+id/minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/minus"
+                android:text="Minus"
+                android:textColor="@color/green"
+                android:textSize="8pt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/multiply" />
+
+            <RadioButton
+                android:id="@+id/multiply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/multiply"
+                android:text="Multiply"
+                android:textColor="@color/green"
+                android:textSize="8pt"
+                tools:layout_editor_absoluteX="52dp" />
+
+            <RadioButton
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/divide"
+                android:text="Divide"
+                android:textColor="@color/green"
+                android:textSize="8pt" />
+
+            <RadioButton
+                android:id="@+id/clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/clear"
+                android:text="Clear Button"
+                android:textSize="8pt" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="232dp"
+            android:layout_height="133dp"
+            android:text="Answer: "
+            android:textSize="20pt" />
+    </LinearLayout>
+
+
+</LinearLayout>
